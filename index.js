@@ -1,9 +1,10 @@
 const express = require('express')
-
 const app = express()
 
+app.use(express.static('public'))
+
 app.get('/', (req, res) => {
-    res.send('Express JS on Vercel')
+    res.sendFile('index.html', {root: Path2D.join(_dirname, 'public')});
 })
 
 app.get('/ping', (req, res) => {
@@ -21,3 +22,4 @@ app.listen(port, (err, res) => {
     }
 })
 
+module.exports = app
