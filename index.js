@@ -4,11 +4,7 @@ const app = express()
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.sendFile('index.html', {root: Path2D.join(_dirname, 'public')});
-})
-
-app.get('/ping', (req, res) => {
-    res.send('pong 🏓')
+    res.sendFile('index.html', {root: path.join(_dirname, 'public')});
 })
 
 const port = process.env.PORT || 3000
