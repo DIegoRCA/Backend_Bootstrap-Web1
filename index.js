@@ -11,7 +11,7 @@ app.get('/ping', (req, res) => {
     res.send('pong 🏓')
 })
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 3000
 
 app.listen(port, (err, res) => {
     if (err) {
